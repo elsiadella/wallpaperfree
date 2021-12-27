@@ -17,9 +17,9 @@ class _MywallpaperState extends State<Mywallpaper> {
     return color;
   }
 
-  void switchWallpaper() {
+  void switchWallpaper(bool wallpaper) {
     setState(() {
-      isWallpaper = !isWallpaper;
+      isWallpaper = wallpaper;
     });
   }
 
@@ -56,7 +56,7 @@ class _MywallpaperState extends State<Mywallpaper> {
                           child: Center(
                             child: TextButton(
                               onPressed: () {
-                                switchWallpaper();
+                                switchWallpaper(true);
                               },
                               child: Text(
                                 'Wallpaper',
@@ -72,12 +72,12 @@ class _MywallpaperState extends State<Mywallpaper> {
                           child: Center(
                             child: TextButton(
                               onPressed: () {
-                                switchWallpaper();
+                                switchWallpaper(false);
                               },
                               child: Text(
                                 'Live Wallpaper',
                                 style: TextStyle(
-                                    color: isWallpaper
+                                    color: !isWallpaper
                                         ? Color(0xFFFF6212)
                                         : Colors.white),
                               ),

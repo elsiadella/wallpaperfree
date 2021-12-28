@@ -38,13 +38,13 @@ class _NewState extends State<New> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => Download()));},
-                      child: Image.asset('image1.png'),
+                      child: Image.asset('assets/image1.png'),
                     ),
                   ),
                   Expanded(
                     child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('image2.png'),
+                      child: Image.asset('assets/image2.png'),
                     ),
                   ),
                 ],
@@ -57,13 +57,13 @@ class _NewState extends State<New> {
                   Expanded(
                     child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('image3.png'),
+                      child: Image.asset('assets/image3.png'),
                     ),
                   ),
                   Expanded(
                     child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('image4.png'),
+                      child: Image.asset('assets/image4.png'),
                     ),
                   ),
                 ],

@@ -22,120 +22,122 @@ class _MywallpaperState extends State<Mywallpaper> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFCCCCCC),
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            isWallpaper
-                ? Column(
-                    children: [
-                      SizedBox(
-                        height: 80.0,
-                      ),
-                      Container(
-                        margin: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 10.0),
-                        child: Row(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              isWallpaper
+                  ? Column(
+                      children: [
+                        SizedBox(
+                          height: 100.0,
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10.0),
+                          child: Row(
+                            children: [
+                              Container(
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: Image.asset('assets/image1.png'),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
+                  : Column(
+                      children: [
+                        SizedBox(
+                          height: 100.0,
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10.0),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: Image.asset('assets/image1.png'),
+                                ),
+                              ),
+                              Expanded(
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: Image.asset('assets/image2.png'),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+              Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    color: Color(0xFF242B32),
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.all(5.0),
+                          // padding: EdgeInsets.all(10.0),
+                          child: Text(
+                            'My Wallpaper',
+                            style: TextStyle(
+                                color: Color(0xFFFF6212),
+                                fontWeight: FontWeight.w800,
+                                fontSize: 20.0),
+                          ),
+                        ),
+                        Row(
+                          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Container(
-                              child: TextButton(
-                                onPressed: () {},
-                                child: Image.asset('image1.png'),
+                            Expanded(
+                              child: Center(
+                                child: TextButton(
+                                  onPressed: () {
+                                    switchWallpaper(true);
+                                  },
+                                  child: Text(
+                                    'Wallpaper',
+                                    style: TextStyle(
+                                        color: isWallpaper
+                                            ? Color(0xFFFF6212)
+                                            : Colors.white),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Center(
+                                child: TextButton(
+                                  onPressed: () {
+                                    switchWallpaper(false);
+                                  },
+                                  child: Text(
+                                    'Live Wallpaper',
+                                    style: TextStyle(
+                                        color: !isWallpaper
+                                            ? Color(0xFFFF6212)
+                                            : Colors.white),
+                                  ),
+                                ),
                               ),
                             ),
                           ],
                         ),
-                      ),
-                    ],
-                  )
-                : Column(
-                    children: [
-                      SizedBox(
-                        height: 80.0,
-                      ),
-                      Container(
-                        margin: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 10.0),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: TextButton(
-                                onPressed: () {},
-                                child: Image.asset('image1.png'),
-                              ),
-                            ),
-                            Expanded(
-                              child: TextButton(
-                                onPressed: () {},
-                                child: Image.asset('image2.png'),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-            Column(
-              children: [
-                Container(
-                  width: double.infinity,
-                  color: Color(0xFF242B32),
-                  padding: EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.all(5.0),
-                        // padding: EdgeInsets.all(10.0),
-                        child: Text(
-                          'My Wallpaper',
-                          style: TextStyle(
-                              color: Color(0xFFFF6212),
-                              fontWeight: FontWeight.w800,
-                              fontSize: 20.0),
-                        ),
-                      ),
-                      Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Expanded(
-                            child: Center(
-                              child: TextButton(
-                                onPressed: () {
-                                  switchWallpaper(true);
-                                },
-                                child: Text(
-                                  'Wallpaper',
-                                  style: TextStyle(
-                                      color: isWallpaper
-                                          ? Color(0xFFFF6212)
-                                          : Colors.white),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Center(
-                              child: TextButton(
-                                onPressed: () {
-                                  switchWallpaper(false);
-                                },
-                                child: Text(
-                                  'Live Wallpaper',
-                                  style: TextStyle(
-                                      color: !isWallpaper
-                                          ? Color(0xFFFF6212)
-                                          : Colors.white),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

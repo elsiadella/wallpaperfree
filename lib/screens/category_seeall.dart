@@ -43,7 +43,7 @@ class _CategoryseeallState extends State<Categoryseeall> {
                               MaterialPageRoute(
                                   builder: (context) => Abstract()));
                         },
-                        child: Image.asset('image1.png'),
+                        child: Image.asset('assets/image1.png'),
                       ),
                       TextButton(
                           onPressed: () {
@@ -69,7 +69,7 @@ class _CategoryseeallState extends State<Categoryseeall> {
                               MaterialPageRoute(
                                   builder: (context) => Nature()));
                         },
-                        child: Image.asset('image2.png'),
+                        child: Image.asset('assets/image2.png'),
                       ),
                       TextButton(
                           onPressed: () {
@@ -98,7 +98,7 @@ class _CategoryseeallState extends State<Categoryseeall> {
                     children: [
                       TextButton(
                         onPressed: () {},
-                        child: Image.asset('image3.png'),
+                        child: Image.asset('assets/image3.png'),
                       ),
                       TextButton(
                           onPressed: () {},
@@ -114,7 +114,7 @@ class _CategoryseeallState extends State<Categoryseeall> {
                     children: [
                       TextButton(
                         onPressed: () {},
-                        child: Image.asset('image4.png'),
+                        child: Image.asset('assets/image4.png'),
                       ),
                       TextButton(
                           onPressed: () {},

@@ -93,7 +93,9 @@ class _DownloadState extends State<Download> {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
                                 child: Text(
                                   "Download",
                                   style: TextStyle(

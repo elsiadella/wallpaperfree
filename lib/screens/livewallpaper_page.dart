@@ -33,13 +33,13 @@ class _LivewallpaperState extends State<Livewallpaper> {
                 Expanded(
                   child: TextButton(
                     onPressed: () {},
-                    child: Image.asset('image1.png'),
+                    child: Image.asset('assets/image1.png'),
                   ),
                 ),
                 Expanded(
                   child: TextButton(
                     onPressed: () {},
-                    child: Image.asset('image2.png'),
+                    child: Image.asset('assets/image2.png'),
                   ),
                 ),
               ],
@@ -52,13 +52,13 @@ class _LivewallpaperState extends State<Livewallpaper> {
                 Expanded(
                   child: TextButton(
                     onPressed: () {},
-                    child: Image.asset('image3.png'),
+                    child: Image.asset('assets/image3.png'),
                   ),
                 ),
                 Expanded(
                   child: TextButton(
                     onPressed: () {},
-                    child: Image.asset('image4.png'),
+                    child: Image.asset('assets/image4.png'),
                   ),
                 ),
               ],
